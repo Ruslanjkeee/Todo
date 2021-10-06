@@ -1,0 +1,180 @@
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 15px;
+    margin: 0;
+    background: linear-gradient(to right, #f1ac11, #1fd8f2)
+  }
+
+  .todo_title {
+    margin: 30px 0 20px 0;
+    text-align: center;
+    font-size: 48px;
+    color: rgb(68, 20, 20);
+  }
+
+  .todo_add-task {
+    display: flex;
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto 30px auto;
+  }
+  
+  .todo_input {   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    color: #311;
+    
+    border: 3px solid rgb(93, 65, 83);
+    background: rgba(255,255,255, 0.4);
+    padding: 10px;
+    margin-right: 10px;
+    flex: 3;
+  }
+  
+  .todo_button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(93, 65, 83);
+    flex: 1;
+    
+    padding: 10px;
+    border: 3px solid rgb(93, 65, 83);
+    border-radius: 2px;
+    background: transparent;
+    box-shadow: 0px 3px 8px 0px #333
+  }
+  
+  .todo_button:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(253, 253, 253);
+    transition: all 0.1s;
+    cursor: pointer;
+  }
+  
+  .todo_button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 8px 0px #333
+  }
+  
+  .todo_list {
+    font-size: 24px;
+    color: #311;
+    
+    background: rgba(93, 65, 83, 0.5);
+    padding: 20px 0;
+    margin: 0 -15px;
+  }
+  
+  .list_item:first-letter {
+    text-transform: uppercase;
+  }
+  
+  .list_item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .list_item {
+    list-style: none;
+    border-bottom: 3px solid orange;
+    border-right: 3px solid orange;
+    border-left: 3px solid orange;
+
+    line-height: 24px;
+    letter-spacing: 0.8px;
+
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+  }
+  
+  .list_item:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .list_item--completed {
+    text-decoration: line-through;
+    background: rgba(0, 0, 0, 0.2);
+    border-color: green;
+  }
+  
+  .item_delete-btn {
+   padding: 0;
+   
+   position: absolute;
+   right: -32px;
+   top: 10px;
+   
+   cursor: pointer;
+   
+    background: none;
+    border: none;
+    transition: transform 0.08s ease-in-out;
+  }
+  
+  .item_delete-btn:hover {
+    transform: rotate(30deg);
+  }
+
+  /* @Media  */
+  @media (max-width: 640px) {
+    .todo_title {
+        font-size: 28px;
+    }
+
+    .todo_input {
+        font-size: 16px;
+    }
+
+    .todo_button {
+        padding: 5px;
+    }
+
+    .todo_list {
+        font-size: 16px;
+    }
+
+    .list_item {
+        padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .todo_title {
+        font-size: 22px;
+    }
+    
+    .todo_add-task {
+        padding: 10px 10px 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .todo_input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .todo_button {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .todo_list {
+        font-size: 14px;
+    }
+
+    .list_item {
+        padding: 3px 6px;
+    }
+
+    .item_delete-btn {
+        right: 2px;
+        top: 3px;
+    }
+  }
